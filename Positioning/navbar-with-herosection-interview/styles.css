@@ -1,0 +1,40 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0a56c5;
+    color: #fff;
+    z-index: 1000;
+}
+
+.navbar .nav-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar .nav-content .nav-links{
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+}
+
+.hero-section{
+    position: relative;
+    height: 100vh;
+    /* background-image: url("https://i.pinimg.com/736x/0c/db/8e/0cdb8ee29a2a44e64894d8537e3eea3a.jpg");
+    background-size: cover;
+    background-position: center; */
+    background-color: #0a56c5;
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-section .hero-text{
+    position: absolute;
+    color: white;
+    /* top: 50%;
+    left: 50%; */
+}
