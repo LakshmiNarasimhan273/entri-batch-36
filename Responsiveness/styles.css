@@ -1,0 +1,33 @@
+/* Laptop screen */
+body{
+    background-color: lightblue;
+}
+
+.container{
+    max-width: 800px;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+
+/* Media query */
+/* Tablet device - 768px */
+@media screen and (max-width: 768px){
+    body{
+        background-color: rebeccapurple;
+    }
+    .container{
+        font-size: 1rem;
+    }
+}
+
+/* Mobile device - 425px */
+@media screen and (max-width: 425px){
+    body{
+        background-color: green;
+    }
+    .container{
+        font-size: 20px;
+        text-align: center;
+    }
+}

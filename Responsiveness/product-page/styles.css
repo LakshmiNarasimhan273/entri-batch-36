@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.products-container{
+    display: flex;
+    /* supportive property for my responsiveness */
+    flex-wrap: wrap; 
+    gap: 10px;
+    justify-content: center;
+}
+
+.product-card{
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    /* flex */
+    flex: 0 1 calc(25% - 2rem);
+}
+
+/* Media queries */
+
+/* Tablet device */
+@media screen and (max-width: 768px) {
+    .product-card{
+        flex: 0 1 calc(33% - 1rem);
+    }
+}
+
+/* Mobile screen */
+@media screen and (max-width: 425px) {
+    .product-card{
+        flex: 0 1 100%;
+    }
+}
