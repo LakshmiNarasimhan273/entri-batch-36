@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h2>Payment form</h2>
+
+    <form id="paymentForm">
+        <input type="number" id="cardNumber" placeholder="Enter your 16 digit number">
+        <div id="cardError"></div>
+
+        <input type="number" id="cvv" placeholder="CVV 3 digits number">
+        <div id="cvvError"></div>
+
+        <input type="text" id="expiryDate" placeholder="12/24">
+        <div id="expiryError"></div>
+
+        <button type="submit">Pay now</button>
+    </form>
+    <div id="success"></div>
+</body>
+</html>

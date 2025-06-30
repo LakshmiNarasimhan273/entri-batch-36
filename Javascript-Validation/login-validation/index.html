@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+
+    <style>
+        .error{
+            color: red;
+            font-weight: bold;
+        }
+
+        .success{
+            color: green;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="loginForm">
+        <input type="text" id="email" placeholder="john@gmail.com">
+        <div class="error" id="emailError"></div>
+
+        <input type="password" id="password" placeholder="John@123">
+        <div class="error" id="passwordError"></div>
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    <div class="success" id="loginOutput"></div>
+</body>
+</html>
