@@ -1,0 +1,28 @@
+#cart{
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    z-index: 999;
+    background-color: lightslategray;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+}
+
+.cart-item{
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+.product-card{
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover{
+    transform: translateY(-5px);
+}
+
+.product-img{
+    height: 180px;
+    object-fit: cover;
+}
