@@ -1,17 +1,6 @@
 const User = require("../model/userModel");
 
 // post api
-const createUser = async (req, res) => {
-    const { username, email, password, mobilenumber, role } = req.body;
-    try {
-        const newUser = new User({ username, email, password, mobilenumber, role });
-        await newUser.save();
-        res.status(201).json({ message: "User account created", newUser });
-    } catch (err) {
-        console.log(err.message);
-        res.status(500).json({ message: 'User account creation failed' });
-    }
-};
 
 const getUsers = async (req, res) => {
     try {
@@ -43,4 +32,4 @@ const deleteUser = async (req, res) => {
     }
 }
 
-module.exports = { createUser, getUsers, updateUser, deleteUser };
+module.exports = { getUsers, updateUser, deleteUser };
