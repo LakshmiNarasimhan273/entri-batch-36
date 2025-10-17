@@ -3,6 +3,7 @@ require("dotenv").config();
 const dbConnection = require("./config/dbConnection");
 const userRoutes = require("./routes/userRoutes");
 const authRoutes = require("./routes/authRoutes");
+const productRoutes = require("./routes/productRoutes");
 
 const app = express();
 
@@ -10,6 +11,7 @@ const app = express();
 app.use(express.json());
 app.use("/api", userRoutes);
 app.use("/auth", authRoutes);
+app.use("/products", productRoutes);
 
 dbConnection();
 app.listen(process.env.port, () => {
