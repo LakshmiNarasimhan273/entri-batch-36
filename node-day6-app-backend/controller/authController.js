@@ -47,7 +47,7 @@ const loginUser = async (req, res) => {
             process.env.secret_key,
             {expiresIn: '24h'}
         )
-        res.status(200).json({message: "Login successful", token});
+        res.status(200).json({message: "Login successful", token: token});
 
     } catch (err) {
         console.log(err.message);
