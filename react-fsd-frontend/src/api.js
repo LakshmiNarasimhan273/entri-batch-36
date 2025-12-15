@@ -1,0 +1,1 @@
+export const API = "https://b36-backend-1.onrender.com"

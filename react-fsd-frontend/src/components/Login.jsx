@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import axios from "axios";
 import { useNavigate, Link } from 'react-router-dom';
+import { jwtDecode } from "jwt-decode";
+import {API} from "../api";
 
 // http://localhost:3001/auth/login
 
@@ -21,9 +23,18 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try{
-      const response = await axios.post("http://localhost:3001/auth/login", form);
+      const response = await axios.post(`${API}/auth/login`, form);
       localStorage.setItem("token", response.data.token);
-      navigate("/dashboard");
+      
+      const decoded = jwtDecode(response.data.token);
+
+      // Role based navigation
+      if(decoded.role === "admin"){
+        navigate("/dashboard");
+      } else if (decoded.role === "user"){
+        navigate("/home");
+      }
+
     }catch(err){
       setError(err.message || "Something went wrong");
     }
